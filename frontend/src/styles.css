@@ -446,12 +446,25 @@ fieldset {
   .project-link {
     min-width:170px;
   }
+  /* На телефоне карточка — поверх списка, иначе она оказывается под всей страницей. */
   .detail {
     width:100%;
     max-height:none;
-    position:static;
+    position:fixed;
+    inset:0;
+    z-index:20;
     border-left:0;
-    border-top:1px solid #d8dee4;
+    padding:0 16px 24px;
+    overscroll-behavior:contain;
+  }
+  .drawer-heading {
+    position:sticky;
+    top:0;
+    z-index:1;
+    background:#fff;
+    margin:0 -16px 20px;
+    padding:14px 16px;
+    border-bottom:1px solid #e4e9ee;
   }
   main {
     width:100%;
